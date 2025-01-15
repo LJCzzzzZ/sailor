@@ -2,13 +2,12 @@ package container
 
 import (
 	"os"
+	"sailor/pkg/mount"
+	"sailor/pkg/rlimit"
+	"sailor/pkg/seccomp"
+	"sailor/runner"
 	"syscall"
 	"time"
-
-	"github.com/criyle/go-sandbox/pkg/mount"
-	"github.com/criyle/go-sandbox/pkg/rlimit"
-	"github.com/criyle/go-sandbox/pkg/seccomp"
-	"github.com/criyle/go-sandbox/runner"
 )
 
 // cmd is the control message send into container

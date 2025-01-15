@@ -1,7 +1,7 @@
 package forkexec
 
 import (
-	"github.com/criyle/go-sandbox/pkg/rlimit"
+	"sailor/pkg/rlimit"
 )
 
 // Runner is the configuration including the exec path, argv
@@ -10,7 +10,6 @@ type Runner struct {
 	// argv and env for execve syscall for the child process
 	Args []string
 	Env  []string
-
 	// POSIX Resource limit set by set rlimit
 	RLimits []rlimit.RLimit
 

@@ -1,9 +1,8 @@
 package libseccomp
 
 import (
+	"sailor/pkg/seccomp"
 	"testing"
-
-	"github.com/criyle/go-sandbox/pkg/seccomp"
 )
 
 var (

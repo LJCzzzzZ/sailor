@@ -1,10 +1,9 @@
 package forkexec
 
 import (
+	"sailor/pkg/mount"
+	"sailor/pkg/rlimit"
 	"syscall"
-
-	"github.com/criyle/go-sandbox/pkg/mount"
-	"github.com/criyle/go-sandbox/pkg/rlimit"
 )
 
 // Runner is the configuration including the exec path, argv

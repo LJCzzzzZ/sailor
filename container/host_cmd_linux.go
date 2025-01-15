@@ -3,10 +3,9 @@ package container
 import (
 	"fmt"
 	"os"
+	"sailor/pkg/unixsocket"
 	"syscall"
 	"time"
-
-	"github.com/criyle/go-sandbox/pkg/unixsocket"
 )
 
 // Ping send ping message to container, wait for 3 second before timeout

@@ -4,12 +4,11 @@ import (
 	"context"
 	"fmt"
 	"os"
+	"sailor/pkg/forkexec"
+	"sailor/runner"
 	"time"
 
 	"golang.org/x/sys/unix"
-
-	"github.com/criyle/go-sandbox/pkg/forkexec"
-	"github.com/criyle/go-sandbox/runner"
 )
 
 const (

@@ -3,12 +3,11 @@ package container
 import (
 	"context"
 	"fmt"
+	"sailor/pkg/rlimit"
+	"sailor/pkg/seccomp"
+	"sailor/pkg/unixsocket"
+	"sailor/runner"
 	"time"
-
-	"github.com/criyle/go-sandbox/pkg/rlimit"
-	"github.com/criyle/go-sandbox/pkg/seccomp"
-	"github.com/criyle/go-sandbox/pkg/unixsocket"
-	"github.com/criyle/go-sandbox/runner"
 )
 
 // ExecveParam is parameters to run process inside container

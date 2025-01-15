@@ -6,9 +6,8 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"sailor/pkg/unixsocket"
 	"strings"
-
-	"github.com/criyle/go-sandbox/pkg/unixsocket"
 )
 
 func (c *containerServer) handlePing() error {

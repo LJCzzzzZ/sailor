@@ -6,13 +6,13 @@ import (
 	"io"
 	"os"
 	"os/exec"
+	"sailor/pkg/forkexec"
+	"sailor/pkg/mount"
+	"sailor/pkg/unixsocket"
+	"sailor/runner"
 	"sync"
 	"syscall"
 
-	"github.com/criyle/go-sandbox/pkg/forkexec"
-	"github.com/criyle/go-sandbox/pkg/mount"
-	"github.com/criyle/go-sandbox/pkg/unixsocket"
-	"github.com/criyle/go-sandbox/runner"
 	"golang.org/x/sys/unix"
 )
 

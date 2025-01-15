@@ -9,23 +9,23 @@ import (
 	"io"
 	"os"
 	"os/signal"
+	"sailor/cmd/runprog/config"
+	"sailor/container"
+	"sailor/pkg/cgroup"
+	"sailor/pkg/forkexec"
+	"sailor/pkg/memfd"
+	"sailor/pkg/mount"
+	"sailor/pkg/rlimit"
+	"sailor/pkg/seccomp"
+	"sailor/pkg/seccomp/libseccomp"
+	"sailor/runner"
+	"sailor/runner/ptrace"
+	"sailor/runner/ptrace/filehandler"
+	"sailor/runner/unshare"
 	"sync/atomic"
 	"syscall"
 	"time"
 
-	"github.com/criyle/go-sandbox/cmd/runprog/config"
-	"github.com/criyle/go-sandbox/container"
-	"github.com/criyle/go-sandbox/pkg/cgroup"
-	"github.com/criyle/go-sandbox/pkg/forkexec"
-	"github.com/criyle/go-sandbox/pkg/memfd"
-	"github.com/criyle/go-sandbox/pkg/mount"
-	"github.com/criyle/go-sandbox/pkg/rlimit"
-	"github.com/criyle/go-sandbox/pkg/seccomp"
-	"github.com/criyle/go-sandbox/pkg/seccomp/libseccomp"
-	"github.com/criyle/go-sandbox/runner"
-	"github.com/criyle/go-sandbox/runner/ptrace"
-	"github.com/criyle/go-sandbox/runner/ptrace/filehandler"
-	"github.com/criyle/go-sandbox/runner/unshare"
 	"golang.org/x/sys/unix"
 )
 
@@ -160,6 +160,7 @@ func start() (*runner.Result, error) {
 		WithBind("/lib", "lib", true).
 		WithBind("/lib64", "lib64", true).
 		WithBind("/usr", "usr", true).
+		WithBind("/root", "root", true).
 		// java wants /proc/self/exe as it need relative path for lib
 		// however, /proc gives interface like /proc/1/fd/3 ..
 		// it is fine since open that file will be a EPERM
@@ -248,7 +249,6 @@ func start() (*runner.Result, error) {
 			fds[i] = uintptr(i)
 		}
 	}
-
 	rlims := rlimit.RLimits{
 		CPU:         timeLimit,
 		CPUHard:     realTimeLimit,

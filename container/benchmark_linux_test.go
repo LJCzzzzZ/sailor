@@ -5,10 +5,9 @@ import (
 	"errors"
 	"os"
 	"runtime"
+	"sailor/runner"
 	"syscall"
 	"testing"
-
-	"github.com/criyle/go-sandbox/runner"
 )
 
 func init() {

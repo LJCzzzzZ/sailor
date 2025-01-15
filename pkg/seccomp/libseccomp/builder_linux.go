@@ -1,9 +1,9 @@
 package libseccomp
 
 import (
+	"sailor/pkg/seccomp"
 	"syscall"
 
-	"github.com/criyle/go-sandbox/pkg/seccomp"
 	libseccomp "github.com/elastic/go-seccomp-bpf"
 	"golang.org/x/net/bpf"
 )

@@ -2,10 +2,10 @@ package forkexec
 
 import (
 	"os"
+	"sailor/pkg/mount"
 	"syscall"
 	"testing"
 
-	"github.com/criyle/go-sandbox/pkg/mount"
 	"golang.org/x/sys/unix"
 )
 

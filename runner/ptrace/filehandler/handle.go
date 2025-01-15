@@ -1,8 +1,6 @@
 package filehandler
 
-import (
-	"github.com/criyle/go-sandbox/ptracer"
-)
+import "sailor/ptracer"
 
 // Handler defines file access restricted handler to call the ptrace
 // safe runner

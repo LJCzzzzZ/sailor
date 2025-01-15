@@ -2,12 +2,11 @@ package container
 
 import (
 	"fmt"
+	"sailor/pkg/forkexec"
+	"sailor/pkg/unixsocket"
+	"sailor/runner"
 	"syscall"
 	"time"
-
-	"github.com/criyle/go-sandbox/pkg/forkexec"
-	"github.com/criyle/go-sandbox/pkg/unixsocket"
-	"github.com/criyle/go-sandbox/runner"
 )
 
 func (c *containerServer) handleExecve(cmd *execCmd, msg unixsocket.Msg) error {

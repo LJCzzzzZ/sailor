@@ -3,10 +3,9 @@ package rlimit
 
 import (
 	"fmt"
+	"sailor/runner"
 	"strings"
 	"syscall"
-
-	"github.com/criyle/go-sandbox/runner"
 )
 
 // RLimits defines the rlimit applied by setrlimit syscall to traced process

@@ -8,11 +8,10 @@ import (
 	"os/signal"
 	"path/filepath"
 	"runtime"
+	"sailor/pkg/unixsocket"
 	"strconv"
 	"sync"
 	"syscall"
-
-	"github.com/criyle/go-sandbox/pkg/unixsocket"
 )
 
 type containerServer struct {

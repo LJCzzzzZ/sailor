@@ -3,10 +3,9 @@ package ptrace
 import (
 	"context"
 	"os"
-
-	"github.com/criyle/go-sandbox/pkg/forkexec"
-	"github.com/criyle/go-sandbox/ptracer"
-	"github.com/criyle/go-sandbox/runner"
+	"sailor/pkg/forkexec"
+	"sailor/ptracer"
+	"sailor/runner"
 )
 
 // Run starts the tracing process

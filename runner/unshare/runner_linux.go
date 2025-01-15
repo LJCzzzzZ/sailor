@@ -1,10 +1,10 @@
 package unshare
 
 import (
-	"github.com/criyle/go-sandbox/pkg/mount"
-	"github.com/criyle/go-sandbox/pkg/rlimit"
-	"github.com/criyle/go-sandbox/pkg/seccomp"
-	"github.com/criyle/go-sandbox/runner"
+	"sailor/pkg/mount"
+	"sailor/pkg/rlimit"
+	"sailor/pkg/seccomp"
+	"sailor/runner"
 )
 
 // Runner runs program in unshared namespaces

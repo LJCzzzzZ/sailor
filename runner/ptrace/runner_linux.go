@@ -1,12 +1,11 @@
 package ptrace
 
 import (
+	"sailor/pkg/rlimit"
+	"sailor/pkg/seccomp"
+	"sailor/ptracer"
+	"sailor/runner"
 	"syscall"
-
-	"github.com/criyle/go-sandbox/pkg/rlimit"
-	"github.com/criyle/go-sandbox/pkg/seccomp"
-	"github.com/criyle/go-sandbox/ptracer"
-	"github.com/criyle/go-sandbox/runner"
 )
 
 // Runner defines the spec to run a program safely by ptracer

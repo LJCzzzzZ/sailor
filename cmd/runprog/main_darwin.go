@@ -5,12 +5,12 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"sailor/pkg/forkexec"
+	"sailor/pkg/rlimit"
+	"sailor/runner"
 	"syscall"
 	"time"
 
-	"github.com/criyle/go-sandbox/pkg/forkexec"
-	"github.com/criyle/go-sandbox/pkg/rlimit"
-	"github.com/criyle/go-sandbox/runner"
 	"golang.org/x/sys/unix"
 )
 

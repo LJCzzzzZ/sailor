@@ -4,10 +4,9 @@ import (
 	"fmt"
 	"os"
 	"path"
+	"sailor/pkg/seccomp/libseccomp"
+	"sailor/ptracer"
 	"syscall"
-
-	"github.com/criyle/go-sandbox/pkg/seccomp/libseccomp"
-	"github.com/criyle/go-sandbox/ptracer"
 )
 
 type tracerHandler struct {

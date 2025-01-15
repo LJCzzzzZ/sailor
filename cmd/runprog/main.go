@@ -4,8 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
-
-	"github.com/criyle/go-sandbox/runner"
+	"sailor/runner"
 )
 
 const (
