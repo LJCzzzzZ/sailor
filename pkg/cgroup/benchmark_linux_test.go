@@ -41,6 +41,7 @@ func BenchmarkCgroup(b *testing.B) {
 		}
 		cg.Destroy()
 	}
+
 }
 
 func TestCgroupAll(t *testing.T) {
